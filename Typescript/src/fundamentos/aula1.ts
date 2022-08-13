@@ -144,6 +144,17 @@
 // for (let count = 0; count <= 10; count += 1) console.log(count);
 
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-for (let count = 0; count <= array.length - 1; count += 1) {
-  if (array[count] % 2 === 0) console.log(array[count] * 5);
+// for (let count = 0; count <= array.length - 1; count += 1) {
+//   if (array[count] % 2 === 0) console.log(array[count] * 5);
+// }
+
+// for in - pega o índice do array
+
+for (let numero in array) {
+  console.log(numero);
+}
+// for of - pega o elemento do array
+
+for (let numero of array) {
+  console.log(numero);
 }
