@@ -21,6 +21,24 @@ const SLIDES = [
   },
 ];
 
+/**
+ *
+ * Desafio:
+ * Criar um pequeno SlideShow
+ *
+ * Tem que ter Três botões: reset, anterior e próximo
+ *
+ * Botão Reset: quando clicado, tem que colocar o primeiro slide na tela.
+ * Quando o primeiro slide estiver na tela, o botão tem que ficar desabilitado.
+ *
+ * Botão Anterior: Quando clicado tem que levar para o slide anterior.
+ * Quando o primeiro slide estiver na tela, o botão tem que ficar desabilitado.
+ *
+ * Botão Próximo: Quando clicado leva ao proximo slide.
+ * Quando o slide for o último, deve ser desabilitado.
+ *
+ */
+
 function App() {
   return (
     <div>
