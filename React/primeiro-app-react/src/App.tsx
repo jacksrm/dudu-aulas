@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const SLIDES = [
   {
     title: "Today's workout plan",
@@ -40,14 +42,34 @@ const SLIDES = [
  */
 
 function App() {
+  const totalSlides = SLIDES.length;
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const reset = () => {
+    setCurrentSlide(0);
+  };
+
+  const previous = () => {
+    setCurrentSlide((prevSlide) => prevSlide - 1);
+  };
+
+  const next = () => {
+    setCurrentSlide((prevSlide) => prevSlide + 1);
+  };
   return (
     <div>
-      <button>reset</button>
-      <button>anterior</button>
-      <button>próximo</button>
+      <button disabled={currentSlide === 0} onClick={reset}>
+        reset
+      </button>
+      <button disabled={currentSlide === 0} onClick={previous}>
+        anterior
+      </button>
+      <button disabled={currentSlide === totalSlides - 1} onClick={next}>
+        próximo
+      </button>
 
-      <h1>Titulo</h1>
-      <p>Texto</p>
+      <h1>{SLIDES[currentSlide].title}</h1>
+      <p>{SLIDES[currentSlide].text}</p>
     </div>
   );
 }
